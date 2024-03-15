@@ -1,0 +1,24 @@
+# mp3 files
+*.mp3
+
+# Local .terraform directories
+**/.terraform/*
+
+# Local code directories
+**/build/*
+**/builds/*
+**/node_modules/*
+**/myenv/*
+
+# .tfstate static_site
+*.tfstate
+*.tfstate.*
+
+# plan static_site
+plan.out
+*.zip
+
+.idea
+.iml
+
+.DS_Store

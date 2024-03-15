@@ -1,0 +1,37 @@
+Danielle: Hi Gregory, it’s Danielle again. I’ve been experiencing issues with my internet connection. It’s extremely slow and keeps disconnecting every few minutes. This is making it impossible to work efficiently.
+
+Gregory: Hi Danielle, I’m sorry to hear you're facing these issues. Let’s see if we can sort this out quickly. Can you tell me if you’re on Wi-Fi or a wired connection?
+
+Danielle: I’m using Wi-Fi. It was fine until a couple of days ago.
+
+Gregory: Alright, let’s start by rebooting your router. Sometimes, a simple restart can fix connectivity issues. Let me know once you’ve done that.
+
+Danielle: Okay, give me a moment… Okay, it’s back on now, but it doesn’t seem to have made any difference.
+
+Gregory: Got it. Let’s check the network settings on your computer next. Sometimes, the issue can be due to incorrect settings or conflicts with other software.
+
+[They go through the network settings and find nothing unusual.]
+
+Gregory: Everything seems fine on that front. Let’s try updating the firmware of your router. It’s a bit technical, so I’ll guide you through the process.
+
+Danielle: It’s updated now. Should I try connecting again?
+
+Gregory: Yes, please. Let’s see if that has made any difference.
+
+Danielle: It seems a bit better, but it’s still not as good as it was before.
+
+Gregory: I see. In that case, it might be a signal strength issue. How far is your computer from the router?
+
+Danielle: It’s in another room, but that’s never been a problem before.
+
+Gregory: There could be new interference. Let’s try moving your computer closer to the router or vice versa, just as a test.
+
+[After some rearrangement, the connection improves significantly.]
+
+Danielle: That did the trick! It’s working much better now. I can’t believe it was something so simple.
+
+Gregory: Sometimes it’s the simplest solutions that work best. I’m glad it’s resolved. Is there anything else I can help with?
+
+Danielle: No, that’s everything. Thank you so much for your patience and help, Gregory.
+
+Gregory: It’s no trouble at all, Danielle. If anything else comes up, you know where to find me. Have a great day!
