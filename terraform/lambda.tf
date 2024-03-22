@@ -59,6 +59,7 @@ module "lambda_function_ingest" {
 
   environment_variables = {
     DYNAMO_TABLE         = module.dynamo.dynamodb_table_id
+    SLACK_SECRET_NAME    = aws_secretsmanager_secret.slackbot_credentials.name
     TRANSCRIBE_S3_BUCKET = module.call_transcription_s3_bucket.s3_bucket_id
   }
 
@@ -97,6 +98,14 @@ module "lambda_function_ingest" {
         "${module.call_recording_s3_bucket.s3_bucket_arn}/*",
         module.call_transcription_s3_bucket.s3_bucket_arn,
         "${module.call_transcription_s3_bucket.s3_bucket_arn}/*"
+      ]
+    }
+    secrets = {
+      effect    = "Allow",
+      actions   = ["secretsmanager:GetSecretValue"],
+      resources = [
+        aws_secretsmanager_secret.slackbot_credentials.arn,
+        aws_secretsmanager_secret_version.slackbot_credentials.arn
       ]
     }
     transcribe = {
