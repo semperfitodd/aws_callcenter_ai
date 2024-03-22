@@ -1,3 +1,10 @@
+variable "company" {
+  description = "Company name"
+  type        = string
+
+  default = ""
+}
+
 variable "domain" {
   description = "Naked domain"
   type        = string
