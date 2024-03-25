@@ -11,9 +11,10 @@ module "dynamo" {
 
   ttl_enabled = false
 
-  attributes = [{
-    name = "UniqueId"
-    type = "S"
+  attributes = [
+    {
+      name = "UniqueId"
+      type = "S"
     }
   ]
 

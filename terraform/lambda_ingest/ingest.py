@@ -42,7 +42,8 @@ def invoke_bedrock_model(full_text):
     model_id = 'anthropic.claude-instant-v1'
     headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
 
-    response = bedrock.invoke_model(body=json.dumps(payload), modelId=model_id, accept=headers['Accept'], contentType=headers['Content-Type'])
+    response = bedrock.invoke_model(body=json.dumps(payload), modelId=model_id, accept=headers['Accept'],
+                                    contentType=headers['Content-Type'])
     if isinstance(response.get('body'), StreamingBody):
         response_content = response['body'].read().decode('utf-8')
     else:
@@ -66,7 +67,8 @@ def process_transcript(transcript, speaker_labels):
         segment_dialogue = " ".join(
             word['alternatives'][0]['content']
             for item in segment['items']
-            if (word := next((word for word in transcript['items'] if 'start_time' in word and word['start_time'] == item['start_time']), None))
+            if (word := next((word for word in transcript['items'] if
+                              'start_time' in word and word['start_time'] == item['start_time']), None))
             and 'alternatives' in word and word['alternatives']
         )
 
@@ -96,8 +98,10 @@ def lambda_handler(event, context):
 
         transcribe_job_name = f"Transcription-{datetime.now().strftime('%Y%m%dT%H%M%S')}"
         transcribe_client.start_transcription_job(TranscriptionJobName=transcribe_job_name,
-            Media={'MediaFileUri': file_uri}, MediaFormat='mp3', LanguageCode='en-US',
-            OutputBucketName=TRANSCRIBE_S3_BUCKET, Settings={'ShowSpeakerLabels': True, 'MaxSpeakerLabels': 2})
+                                                  Media={'MediaFileUri': file_uri}, MediaFormat='mp3',
+                                                  LanguageCode='en-US',
+                                                  OutputBucketName=TRANSCRIBE_S3_BUCKET,
+                                                  Settings={'ShowSpeakerLabels': True, 'MaxSpeakerLabels': 2})
 
         while True:
             status = transcribe_client.get_transcription_job(TranscriptionJobName=transcribe_job_name)

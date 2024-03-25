@@ -101,8 +101,8 @@ module "lambda_function_ingest" {
       ]
     }
     secrets = {
-      effect    = "Allow",
-      actions   = ["secretsmanager:GetSecretValue"],
+      effect  = "Allow",
+      actions = ["secretsmanager:GetSecretValue"],
       resources = [
         aws_secretsmanager_secret.slackbot_credentials.arn,
         aws_secretsmanager_secret_version.slackbot_credentials.arn
