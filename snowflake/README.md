@@ -5,5 +5,5 @@ This folder contains a demo for Call Center Analysis solution implemented in Sno
 The end user perspective is captured in this file - Call Center Analysis GUI in Streamlit.pdf
 
 ## Architecture
-![Architecture Diagram](./Call Center Snowflake Solution Architecture.png)
+![Architecture Diagram](images/Call Center Snowflake Solution Architecture.png)
 
